@@ -2981,6 +2981,78 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 71f104166a120f84c95276880f0d37cc, type: 3}
   m_PrefabInstance: {fileID: 88467970}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &93963820
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 36ba870b31277434aa9daa8047a9f972, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -80.15
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 36ba870b31277434aa9daa8047a9f972, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0032854676
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 36ba870b31277434aa9daa8047a9f972, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 38.12
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 36ba870b31277434aa9daa8047a9f972, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 36ba870b31277434aa9daa8047a9f972, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 36ba870b31277434aa9daa8047a9f972, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 36ba870b31277434aa9daa8047a9f972, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 36ba870b31277434aa9daa8047a9f972, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 36ba870b31277434aa9daa8047a9f972, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 36ba870b31277434aa9daa8047a9f972, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -6837567762474165156, guid: 36ba870b31277434aa9daa8047a9f972, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1c75b8f809dab7445b91e76f681f6e6b, type: 2}
+    - target: {fileID: 919132149155446097, guid: 36ba870b31277434aa9daa8047a9f972, type: 3}
+      propertyPath: m_Name
+      value: Mercedes E Taxi
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030026497039243431, guid: 36ba870b31277434aa9daa8047a9f972, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a0f31d8a9f0b3e4498da47bbc23418e8, type: 2}
+    - target: {fileID: 7705203592201264527, guid: 36ba870b31277434aa9daa8047a9f972, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1c75b8f809dab7445b91e76f681f6e6b, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8003475614116299765, guid: 36ba870b31277434aa9daa8047a9f972, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1248169813}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36ba870b31277434aa9daa8047a9f972, type: 3}
 --- !u!1001 &94153808
 PrefabInstance:
   m_ObjectHideFlags: 0
