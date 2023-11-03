@@ -41,12 +41,12 @@ public class taxiScript : MonoBehaviour
     public void getNewTaxiTarget(){
         //get the new target position of the  taxi
         Vector3 currentTaxiPosition = taxi.transform.position;
-        currentTaxiPosition.x += 60;
+        currentTaxiPosition.x += 99;
         targetTaxi = currentTaxiPosition;
 
         //get the new target position of the origin
         Vector3 currentOriginPosition = origin.transform.position;
-        currentOriginPosition.x += 60;
+        currentOriginPosition.x += 99;
         targetOrigin = currentOriginPosition;
 
         speed = 5f;
