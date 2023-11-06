@@ -26,9 +26,6 @@ public class taxiScript : MonoBehaviour
     {
         if(buttionCliked == true)
         {
-            //print speed
-            Debug.Log("speed: " + speed);
-
             //move the taxi         
             taxi.transform.position = Vector3.MoveTowards(taxi.transform.position, targetTaxi, speed * Time.deltaTime);
             
@@ -36,17 +33,23 @@ public class taxiScript : MonoBehaviour
             origin.transform.position = Vector3.MoveTowards(origin.transform.position, targetOrigin, speed * Time.deltaTime);
         }
 
+        if(taxi.transform.position == targetTaxi)
+        {
+            buttionCliked = false;
+            speed = 0;
+        }
+
     }
 
     public void getNewTaxiTarget(){
         //get the new target position of the  taxi
         Vector3 currentTaxiPosition = taxi.transform.position;
-        currentTaxiPosition.x += 99;
+        currentTaxiPosition.x += 80;
         targetTaxi = currentTaxiPosition;
 
         //get the new target position of the origin
         Vector3 currentOriginPosition = origin.transform.position;
-        currentOriginPosition.x += 99;
+        currentOriginPosition.x += 80;
         targetOrigin = currentOriginPosition;
 
         speed = 5f;
@@ -55,21 +58,26 @@ public class taxiScript : MonoBehaviour
 
     public void teleportIntoTaxi()
     {
-        Vector3 newPosition = new Vector3(29.83f, 0f, -83.46f);
+        
        
+       if (buttionCliked == false)
+        {
+            Vector3 newPosition = new Vector3(-78.277f, 2f, 35.861f);
+            // Calculate the offset from the XR Origin to the Camera
+            Vector3 offset = cameraTransform.localPosition;
 
-        // Calculate the offset from the XR Origin to the Camera
-        Vector3 offset = cameraTransform.localPosition;
-
-        // Adjust the target position by the offset
-        // This ensures that the camera ends up at the correct position
-        Vector3 adjustedPosition = newPosition - offset;
+            // Adjust the target position by the offset
+            // This ensures that the camera ends up at the correct position
+            Vector3 adjustedPosition = newPosition - offset;
 
 
-        origin.transform.localPosition = adjustedPosition;
-        buttionCliked = true;
-        getNewTaxiTarget();
-        //PlayAnimation();
+            origin.transform.localPosition = adjustedPosition;
+            buttionCliked = true;
+            getNewTaxiTarget();
+        }
+
+
+
         
     }
 
