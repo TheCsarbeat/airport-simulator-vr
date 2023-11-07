@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class taxiScript : MonoBehaviour
 {
-    
-    public XROrigin  origin;
+
+    public XROrigin origin;
     public Transform cameraTransform; // Assign your Camera's transform here
     public GameObject taxi;
 
@@ -18,22 +18,22 @@ public class taxiScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(buttionCliked == true)
+        if (buttionCliked == true)
         {
             //move the taxi         
             taxi.transform.position = Vector3.MoveTowards(taxi.transform.position, targetTaxi, speed * Time.deltaTime);
-            
+
             //move the origin
             origin.transform.position = Vector3.MoveTowards(origin.transform.position, targetOrigin, speed * Time.deltaTime);
         }
 
-        if(taxi.transform.position == targetTaxi)
+        if (taxi.transform.position == targetTaxi)
         {
             buttionCliked = false;
             speed = 0;
@@ -41,7 +41,8 @@ public class taxiScript : MonoBehaviour
 
     }
 
-    public void getNewTaxiTarget(){
+    public void getNewTaxiTarget()
+    {
         //get the new target position of the  taxi
         Vector3 currentTaxiPosition = taxi.transform.position;
         currentTaxiPosition.x += 80;
@@ -58,9 +59,9 @@ public class taxiScript : MonoBehaviour
 
     public void teleportIntoTaxi()
     {
-        
-       
-       if (buttionCliked == false)
+
+
+        if (buttionCliked == false)
         {
             Vector3 newPosition = new Vector3(-78.277f, 2f, 35.861f);
             // Calculate the offset from the XR Origin to the Camera
@@ -76,11 +77,6 @@ public class taxiScript : MonoBehaviour
             getNewTaxiTarget();
         }
 
-
-
-        
     }
-
-
 
 }
