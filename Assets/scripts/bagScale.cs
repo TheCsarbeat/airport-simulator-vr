@@ -8,6 +8,7 @@ public class bagScale : MonoBehaviour
     public GameObject bagCorrect;
     public GameObject bagWrong;
     public GameObject currentWeight;
+    public GameObject planeProtection;
 
     int weigh = 0;
 
@@ -19,6 +20,7 @@ public class bagScale : MonoBehaviour
         bagCorrect.SetActive(false);
         bagWrong.SetActive(false);
         bagCorrectCollition = false;
+        planeProtection.SetActive(true);
     }
 
     // Update is called once per frame
@@ -37,6 +39,7 @@ public class bagScale : MonoBehaviour
             bagCorrect.SetActive(true);
             bagWrong.SetActive(false);
             setWeight();
+            planeProtection.SetActive(false);
         }
         if (collision.gameObject.name == "bag1"){
             weigh = 16;

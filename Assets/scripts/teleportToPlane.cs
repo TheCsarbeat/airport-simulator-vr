@@ -7,9 +7,9 @@ public class teleportToPlane : MonoBehaviour
     public Transform cameraTransform; // Assign your Camera's transform here
     public GameObject plane;
 
-    public bool buttionCliked = false;
+    public bool buttionClikedPlane = false;
 
-    public float speed = 10;
+    public float speedPlane = 10;
 
     public Vector3 targetPlane;
     public Vector3 targetOrigin;
@@ -29,19 +29,19 @@ public class teleportToPlane : MonoBehaviour
         targetOrigin.z = moveInsidePlane.z;
 
 
-        if(buttionCliked == true)
+        if(buttionClikedPlane == true)
         {
             //move the plane         
-            plane.transform.position = Vector3.MoveTowards(plane.transform.position, targetPlane, speed * Time.deltaTime);
+            plane.transform.position = Vector3.MoveTowards(plane.transform.position, targetPlane, speedPlane * Time.deltaTime);
             
             //move the origin
-            origin.transform.position = Vector3.MoveTowards(origin.transform.position, targetOrigin, speed * Time.deltaTime);
+            origin.transform.position = Vector3.MoveTowards(origin.transform.position, targetOrigin, speedPlane * Time.deltaTime);
         }
 
         if(plane.transform.position == targetPlane)
         {
-            buttionCliked = false;
-            speed = 0;
+            buttionClikedPlane = false;
+            speedPlane = 0;
         }
 
     }
@@ -61,7 +61,7 @@ public class teleportToPlane : MonoBehaviour
         Debug.Log("target localposition: " + targetOrigin);
 
 
-        speed = 10f;
+        speedPlane = 10f;
 
     }
 
@@ -84,7 +84,7 @@ public class teleportToPlane : MonoBehaviour
         origin.transform.localPosition = adjustedPosition;
 
         getNewTarget();
-        buttionCliked = true;
+        buttionClikedPlane = true;
 
         //PlayAnimation();
         
